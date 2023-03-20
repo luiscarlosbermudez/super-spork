@@ -1,3 +1,7 @@
+"""
+This module generates a catalog of stars near Andromeda, with their positions in RA and DEC.
+"""
+
 # Determine Andromeda location in ra/dec degrees
 
 from random import uniform
