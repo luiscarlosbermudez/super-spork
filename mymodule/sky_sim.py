@@ -29,7 +29,9 @@ for i in range(nsrc):
 
 
 # now write these to a csv file for use by my other program
-f = open('catalog.csv','w')
-print("id,ra,dec", file=f)
+#f = open('catalog.csv','w')
+with open('catalog.csv', 'w', encoding='utf-8') as f:
+    # code that uses the file object
+    print("id,ra,dec", file=f)
 for i in range(nsrc):
     print("{0:07d}, {1:12f}, {2:12f}".format(i, ras[i], decs[i]), file=f)
