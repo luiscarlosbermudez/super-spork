@@ -34,4 +34,5 @@ with open('catalog.csv', 'w', encoding='utf-8') as f:
     # code that uses the file object
     print("id,ra,dec", file=f)
     for i in range(NSRC):
-        print("{0:07d}, {1:12f}, {2:12f}".format(i, ras[i], decs[i]), file=f)
+        print(f"{i:07d}, {ras[i]:12f}, {decs[i]:12f}", file=f)
+        #print("{0:07d}, {1:12f}, {2:12f}".format(i, ras[i], decs[i]), file=f)
