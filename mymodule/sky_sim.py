@@ -17,7 +17,8 @@ ra = ra/cos(dec*pi/180)
 nsrc = 1_000
 
 # make 1000 stars within 1 degree of Andromeda
-from random import *
+#from random import *
+from random import uniform
 ras = []
 decs = []
 for i in range(nsrc):
