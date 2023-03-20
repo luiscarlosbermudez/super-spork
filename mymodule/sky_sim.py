@@ -10,6 +10,22 @@ from math import pi, cos
 NSRC = 1_000
 
 def get_radec():
+    '''
+    Converts Right Ascension and Declination from
+    hours, minutes and seconds to degrees (from character to float)
+
+    Parameters
+    ---------
+    RA : character
+    Right ascension of Andromeda
+    DEC: character
+    Declination of Andromeda
+
+    Returns
+    ------
+    RA: in degrees (float)
+    DEC: in degrees (float)
+    '''
     # from wikipedia
     RA = '00:42:44.3'
     DEC = '41:16:09'
