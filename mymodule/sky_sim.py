@@ -72,9 +72,8 @@ def skysim_parser():
     return parser
 
 def main():
-    if __name__ == "__main__":
-        parser = skysim_parser()
-        options = parser.parse_args()
+    parser = skysim_parser()
+    options = parser.parse_args()
     # if ra/dec are not supplied the use a default value
     if None in [options.ra, options.dec]:
         ra, dec = get_radec()
@@ -82,7 +81,7 @@ def main():
         ra = options.ra
         dec = options.dec
 
-    ras, decs = make_positions(ra,dec)
+    ras, decs = make_stars(ra,dec, NSRC)
     # now write these to a csv file for use by my other program
     with open(options.out,'w') as f:
         print("id,ra,dec", file=f)
